@@ -13,4 +13,5 @@ for i in range(a,b+1):
 
     div.append(i)
     if len(div) == 4:
+        div.reverse()
         print(i,"divisors: ",div[0],div[1],div[2],div[3])
