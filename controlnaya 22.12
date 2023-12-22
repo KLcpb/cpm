@@ -1,0 +1,44 @@
+class newint():
+    num = 0
+    def __init__(self,n):
+        self.num = n
+    def c(self):
+        f = 0
+        for i in str(self.num):
+            f+=int(i)
+        return f
+    def intc(self,a):
+        f = 0
+        for i in str(a):
+            f+=int(i)
+        return f
+    def __lt__(self,other):
+        if type(other) == type(1):
+            return self.c() < self.intc(other)
+        else:
+            return self.c() < other.c()
+    def __gt__(self,other):
+        if type(other) == type(1):
+            return self.c() > self.intc(other)
+        else:
+            return self.c() > other.c()
+    def __eq__(self,other):
+        if type(other) == type(1):
+            return self.c() == self.intc(other)
+        else:
+            return self.c() == other.c()
+    def __le__(self,other):
+        if type(other) == type(1):
+            return self.c() <= self.intc(other)
+        else:
+            return self.c() <= other.c()
+    def __ge__(self,other):
+        if type(other) == type(1):
+            return self.c() >= self.intc(other)
+        else:
+            return self.c() >= other.c()
+    
+a = newint(12)
+b = newint(5)
+print(a<41)
+    
